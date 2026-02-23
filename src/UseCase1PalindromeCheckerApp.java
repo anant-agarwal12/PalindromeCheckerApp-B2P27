@@ -5,6 +5,7 @@ public class UseCase1PalindromeCheckerApp{
     public static void main(String args[]){
         welcomeMessage();
         hardcodedPalindrome();
+        stringReverse();
     }
 
     public static void welcomeMessage(){
@@ -29,8 +30,19 @@ public class UseCase1PalindromeCheckerApp{
         }
 
         if(notPalindrome)
-            System.out.println("Is it a Palindrome? : false");
+            System.out.println("Is it a Palindrome? : false\n");
         else
-            System.out.println("Is it a Palindrome? : true");
+            System.out.println("Is it a Palindrome? : true\n");
+    }
+
+    public static void stringReverse(){
+        System.out.println("Palindrome Checker Using String Reverse:");
+        System.out.println("Input text: madam");
+        String test = "madam";
+        String reverse = "";
+        for(int i = test.length()-1 ; i>=0 ; i--){
+            reverse = reverse + test.charAt(i);
+        }
+        System.out.println("Is it a palindrome? : " + test.equals(reverse));
     }
 }
