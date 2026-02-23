@@ -1,6 +1,4 @@
-// Use Case 1 - Application Entry & Welcome Message
-
-public class UseCase1PalindromeCheckerApp{
+public class PalindromeCheckerApp {
 
     public static void main(String args[]){
         welcomeMessage();
