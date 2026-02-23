@@ -1,11 +1,12 @@
 // Use Case 1 - Application Entry & Welcome Message
 import java.util.*;
-public class UseCase1PalindromeCheckerApp{
+public class PalindromeCheckerApp {
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         welcomeMessage();
         hardcodedPalindrome();
         stringReverse();
+        charArray();
     }
 
     public static void welcomeMessage(){
@@ -43,6 +44,25 @@ public class UseCase1PalindromeCheckerApp{
         for(int i = test.length()-1 ; i>=0 ; i--){
             reverse = reverse + test.charAt(i);
         }
-        System.out.println("Is it a palindrome? : " + test.equals(reverse));
+        System.out.println("Is it a palindrome? : " + test.equals(reverse)+'\n');
+    }
+
+    public static void charArray(){
+        System.out.println("Palindrome Checker Using Char Array:");
+        System.out.println("Input text: radar");
+        String test = "radar";
+        char[] chars = test.toCharArray();
+
+        int i=0 , j=test.length()-1;
+        boolean palindrome = true;
+        while(i<=j){
+            if(chars[i]!=chars[j]){
+                palindrome = false;
+                break;
+            }
+            i++;
+            j--;
+        }
+        System.out.println("Is it a palindrome? : "+palindrome);
     }
 }
