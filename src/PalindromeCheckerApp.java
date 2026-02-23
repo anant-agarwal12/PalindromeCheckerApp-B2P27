@@ -1,4 +1,3 @@
-// Use Case 1 - Application Entry & Welcome Message
 import java.util.*;
 public class PalindromeCheckerApp {
 
